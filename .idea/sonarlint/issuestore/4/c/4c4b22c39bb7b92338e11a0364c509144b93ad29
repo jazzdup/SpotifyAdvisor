@@ -1,0 +1,10 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(ü¸å
+i
+java:S1602"SRemove useless curly braces around statement and then remove useless return keyword(–Ø”Ì
+N	java:S106"9Replace this use of System.out or System.err by a logger.(–ŠÑ¢
+q
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(÷‰îƒ8©ö­ÎĞ/
+0
+java:S1220""Move this file to a named package.

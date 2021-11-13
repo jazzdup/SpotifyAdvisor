@@ -1,0 +1,14 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Å­ËÝúÿÿÿÿ
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(ÆÎ±Üûÿÿÿÿ
+N	java:S106E"9Replace this use of System.out or System.err by a logger.(ù——¶
+€
+java:S1319""eThe type of "items" should be an interface such as "List" rather than the implementation "ArrayList".(ØŒ­ùûÿÿÿÿ
+T
+java:S1155D">Use isEmpty() to check whether the collection is empty or not.(É†¦È
+?
+java:S2629>"$Invoke method(s) only conditionally.(…¸Ž–øÿÿÿÿ
+?
+java:S2629?"$Invoke method(s) only conditionally.(íÖ†ˆúÿÿÿÿ
+:
+java:S2629@"$Invoke method(s) only conditionally.(ýÌ¼¿

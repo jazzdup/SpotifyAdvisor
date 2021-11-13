@@ -1,0 +1,7 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(öÎç
+q
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(»³Í8«¡…ÖĞ/
+0
+java:S1220""Move this file to a named package.

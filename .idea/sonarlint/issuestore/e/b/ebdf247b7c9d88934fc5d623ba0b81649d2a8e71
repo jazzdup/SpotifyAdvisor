@@ -1,5 +1,0 @@
-
-™
-java:S1130"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(àÒþüøÿÿÿÿ8³Þ¢ÂÑ/
-K
-java:S2140")Use "java.util.Random.nextInt()" instead.(ñÄ¶Æýÿÿÿÿ8Ó›„ Ñ/

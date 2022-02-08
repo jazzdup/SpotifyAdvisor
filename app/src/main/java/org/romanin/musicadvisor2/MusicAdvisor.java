@@ -22,7 +22,7 @@ public class MusicAdvisor {
     static final String SPOTIFY_PATH = "/api/token";
     private final String CLIENT_ID = "1e3e3fc2ce72464aa85ec9c082ef812c";
     //@todo: NEVER STORE SECRETS IN CODE!!!
-    private final String CLIENT_SECRET = "16a648a0821242e8b87a976212081c3d";
+    private final String CLIENT_SECRET = "e7666986313d4b8cb7725255e744eeb3";
     private final String apiBase;
 
     private String serverBase;
@@ -101,9 +101,11 @@ public class MusicAdvisor {
             server.start();
             while (code == null) {
                 System.out.println("waiting for code...");
-                Thread.sleep(1000);
+                Thread.sleep(2000);
             }
             log.debug("got code");
+            System.out.println("NEW albums | FEatured playlists | CAtegories(all) | PLaylists in category | \n" +
+                    "Next | Previous | EXIT");
             return;
         } catch (InterruptedException e) {
             // Restore interrupted state...

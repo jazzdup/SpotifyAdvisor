@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         String spotifyBase = "https://accounts.spotify.com";
         String apiBase = "https://api.spotify.com";
-        int pageSize = 5;
+        int pageSize = 20; //chosen to match default page size
         int port = 8765;
         if (args.length > 1) {
             int portMin = 49152;

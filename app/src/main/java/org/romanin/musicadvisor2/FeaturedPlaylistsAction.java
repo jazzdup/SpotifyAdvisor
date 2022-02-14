@@ -4,8 +4,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-public class FeaturedAction extends AbstractAction {
-    public FeaturedAction(ActionConfig actionConfig){
+public class FeaturedPlaylistsAction extends AbstractAction {
+    public FeaturedPlaylistsAction(ActionConfig actionConfig){
         super(actionConfig);
     }
 
@@ -16,10 +16,10 @@ public class FeaturedAction extends AbstractAction {
         Data returnData = new Data();
         for (JsonElement item : items) {
             JsonObject obj = item.getAsJsonObject();
-            String dataItem = (obj.get("name").getAsString()) + "\n";
+            String dataItem = (obj.get("name").getAsString()) + " ";
             String urlSpotify = obj.get("external_urls").getAsJsonObject().get("spotify")
                     .getAsString();
-            dataItem += (urlSpotify + "\n");
+            dataItem += (urlSpotify);
             returnData.addItem(dataItem);
         }
         return returnData;

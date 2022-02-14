@@ -25,10 +25,10 @@ public class PlaylistsAction extends AbstractAction {
             log.debug(items.toString());
             for (JsonElement item : items) {
                 JsonObject obj = item.getAsJsonObject();
-                String dataItem = obj.get("name").getAsString() + "\n";
+                String dataItem = obj.get("name").getAsString() + " ";
                 String urlSpotify = obj.get("external_urls").getAsJsonObject().get("spotify")
                         .getAsString();
-                dataItem += urlSpotify + "\n";
+                dataItem += urlSpotify;
                 returnData.addItem(dataItem);
             }
         } catch (SpotifyError e) {

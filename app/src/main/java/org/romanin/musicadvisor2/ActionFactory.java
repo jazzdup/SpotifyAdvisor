@@ -17,7 +17,7 @@ public class ActionFactory {
         if (input.startsWith("new")){
             return new NuReleasesAction(actionConfig);
         }else if (input.startsWith("fe")){
-            return new FeaturedAction(actionConfig);
+            return new FeaturedPlaylistsAction(actionConfig);
         }else if (input.startsWith("ca")){
             return new CategoriesAction(actionConfig);
         }else if (input.startsWith("pl")){
@@ -92,7 +92,7 @@ class AbstractAction implements Action {
             throw new SpotifyError(123, "problem contacting spotify - likely invalid url?"
                     + e.getMessage(), e );
         }
-        log.debug("response:");//@TODO: test this FINE shit via config
+        log.debug("response:");
         log.debug(response.body());
         JsonObject jsonObject = JsonParser.parseString(response.body()).getAsJsonObject();
         if (response.body().contains("error")) {

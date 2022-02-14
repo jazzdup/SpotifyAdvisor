@@ -66,6 +66,7 @@ public class MusicAdvisor {
     public void run() {
         Scanner scanner = new Scanner(System.in);
         Data data = new Data();
+        System.out.println("type 'auth' to login");
         while(! exit) {
             try {
                 String input = scanner.nextLine();
@@ -76,6 +77,7 @@ public class MusicAdvisor {
                     Action action = actionFactory.createAction(actionConfig);
                     data = action.execute(data);
                     data.print(pageSize);
+                    printMenu();
                 }
             } catch (SpotifyError e) {
                 System.out.println(e.getMessage());
@@ -104,14 +106,18 @@ public class MusicAdvisor {
                 Thread.sleep(2000);
             }
             log.debug("got code");
-            System.out.println("NEW albums | FEatured playlists | CAtegories(all) | PLaylists in category | \n" +
-                    "Next | Previous | EXIT");
+            printMenu();
             return;
         } catch (InterruptedException e) {
             // Restore interrupted state...
             Thread.currentThread().interrupt();
             throw new RuntimeException(e);
         }
+    }
+
+    private void printMenu() {
+        System.out.println(
+            "NEW albums | FEatured playlists | CAtegories(all) | PLaylists in category | Next | Previous | EXIT");
     }
 
     private boolean checkAuth(String input){
